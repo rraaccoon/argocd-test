@@ -15,7 +15,7 @@ spec:
     spec:
       containers:
       - name: boot-container
-        image: raccoonohgiraffer/argo_boot:3
+        image: raccoonohgiraffer/argo_boot:4
         imagePullPolicy: Always
         ports:
         - containerPort: 7777
