@@ -1,0 +1,19 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: argo-react-dep
+spec:
+  selector:
+    matchLabels:
+      app: reactdep
+  template:
+    metadata:
+      labels:
+        app: reactdep
+    spec:
+      containers:
+      - name: react-container
+        image: raccoonohgiraffer/argo_react:latest
+        imagePullPolicy: Always
+        ports:
+        - containerPort: 80      # 5173이 아니라 80으로 바꿔야 한다.
